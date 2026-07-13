@@ -9,35 +9,35 @@ import {ContactSection} from "@/components/contact-section";
 const images = [
     {
         src: "/images/gallery/bmw.jpg",
-        alt: "BMW — պատրաստված և ծրագրավորված բանալի",
+        alt: "BMW: պատրաստված և ծրագրավորված բանալի",
     },
     {
         src: "/images/gallery/mercedes-e.jpg",
-        alt: "Mercedes-Benz E63 — բանալիների կրկնօրինակում",
+        alt: "Mercedes-Benz E63: բանալիների կրկնօրինակում",
     },
     {
         src: "/images/gallery/maseratti.jpg",
-        alt: "Maserati — պատրաստված և ծրագրավորված բանալի",
+        alt: "Maserati: պատրաստված և ծրագրավորված բանալի",
     },
     {
         src: "/images/gallery/cadillac.jpg",
-        alt: "Cadillac — պատրաստված և ծրագրավորված բանալի",
+        alt: "Cadillac: պատրաստված և ծրագրավորված բանալի",
     },
     {
         src: "/images/gallery/mustang.jpg",
-        alt: "Ford Mustang — պատրաստված և ծրագրավորված բանալի",
+        alt: "Ford Mustang: պատրաստված և ծրագրավորված բանալի",
     },
     {
         src: "/images/gallery/lex.jpg",
-        alt: "Lexus — բանալիների կրկնօրինակում",
+        alt: "Lexus: բանալիների կրկնօրինակում",
     },
     {
         src: "/images/gallery/corolla.jpg",
-        alt: "Toyota Corolla — պատրաստված և ծրագրավորված բանալի",
+        alt: "Toyota Corolla: պատրաստված և ծրագրավորված բանալի",
     },
     {
         src: "/images/gallery/bz3x.jpg",
-        alt: "Toyota bZ3X — բանալիների ծրագրավորում",
+        alt: "Toyota bZ3X: բանալիների ծրագրավորում",
     },
     {
         src: "/images/gallery/ez61.jpg",
@@ -49,7 +49,7 @@ const images = [
     },
     {
         src: "/images/gallery/pathfiner-2002.jpg",
-        alt: "Nissan Pathfinder (2002) — բանալիի վերականգնում",
+        alt: "Nissan Pathfinder (2002): բանալիի վերականգնում",
     },
 ]
 

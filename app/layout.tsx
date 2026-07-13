@@ -7,11 +7,9 @@ import { Suspense } from "react"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Autobanali.am - Professional Automobile Locksmith Services",
+  title: "Autobanali.am - Բանալիների վերականգնում և կրկնօրինակում",
   description:
-      "Professional automobile locksmith services available 24/7. Emergency lockouts, key programming, and security solutions in Texas.",
-
-  // ✅ Added icons & manifest
+      "Ավտոմեքենաների բանալիների պատրաստում, կրկնօրինակում և մասնագիտացված ծրագրավորում, դռների անվնաս բացում։ Ձեզ հարմար վայրում և 24/7 ռեժիմով՝ Երևանում և մարզերում։",
   icons: {
     icon: [
       { url: "/images/favicon/favicon-96x96.png", sizes: "96x96", type: "image/png" },
@@ -24,7 +22,7 @@ export const metadata: Metadata = {
   },
 
   appleWebApp: {
-    title: "Autobanali",
+    title: "Autobanali.am",
   },
 
   manifest: "/images/favicon/site.webmanifest",
