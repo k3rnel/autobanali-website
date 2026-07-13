@@ -1,0 +1,41 @@
+services:
+  web:
+    # In production, pull the image the GitHub Action published:
+    #   docker compose pull && docker compose up -d
+    # Locally, `docker compose up --build` uses the build block instead.
+    image: ${IMAGE:-ghcr.io/OWNER/REPO}:${IMAGE_TAG:-latest}
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+    # Not published to the host: only nginx talks to it.
+    expose:
+      - "3000"
+    networks:
+      - web
+
+  nginx:
+    image: nginx:1.27-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      DOMAIN: ${DOMAIN:?set DOMAIN in .env, e.g. autobanali.am}
+      # Only substitute ${DOMAIN} in the template; leave nginx's own $vars alone.
+      NGINX_ENVSUBST_FILTER: "DOMAIN"
+    volumes:
+      - ./nginx/templates:/etc/nginx/templates:ro
+      - ./nginx/snippets:/etc/nginx/snippets:ro
+      - ./nginx/certs:/etc/nginx/certs:ro
+    depends_on:
+      web:
+        condition: service_healthy
+    networks:
+      - web
+
+networks:
+  web:
+    driver: bridge

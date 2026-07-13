@@ -52,7 +52,7 @@ Be aware of these before "fixing" something that was never wired up:
 
 - **Contact form does not submit.** `ContactSection.handleSubmit` only calls `console.log`. There is no endpoint behind it.
 - **Dark mode is dead code.** `next-themes` is installed and `components/theme-provider.tsx` exists, but `ThemeProvider` is never mounted in `app/layout.tsx`, so the `.dark` tokens in `globals.css` never activate.
-- **Remote images depend on `images.unoptimized: true`.** `app/gallery/page.tsx` passes external istockphoto/unsplash URLs to `next/image`. That works only because optimization is off. Turning optimization on requires adding `images.remotePatterns` for those hosts, or (better) moving to the local photos already sitting in `public/images/gallery/`, which are currently unused.
+- **`images.unoptimized: true` means the gallery photos ship at full size.** All images are now local (`public/images/gallery/`, wired into `app/gallery/page.tsx`), but several are 2 to 4 MB straight off a phone and are served as-is, with no resizing or WebP conversion. If page weight matters, either compress them at rest or turn optimization back on. Note that `next/image` with a remote `src` would then also need `images.remotePatterns`, which is why the old stock-photo URLs worked before.
 
 ## Content and language
 

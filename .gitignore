@@ -28,6 +28,11 @@ yarn-error.log*
 # env files
 .env
 .env*.local
+!.env.example
+
+# TLS material: the Cloudflare origin cert and its private key must never be committed
+nginx/certs/*
+!nginx/certs/README.md
 
 # vercel
 .vercel
