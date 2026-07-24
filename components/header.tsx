@@ -47,7 +47,7 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#home" className="text-foreground hover:text-accent transition-colors font-medium">
+            <a href="/" className="text-foreground hover:text-accent transition-colors font-medium">
               Գլխավոր
             </a>
             <a href="/gallery" className="text-foreground hover:text-accent transition-colors font-medium">
@@ -78,17 +78,14 @@ export function Header() {
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-border">
             <div className="flex flex-col gap-4 pt-4">
-              <a href="#home" className="text-foreground hover:text-accent transition-colors font-medium">
-                Home
+              <a href="/" className="text-foreground hover:text-accent transition-colors font-medium">
+                Գլխավոր
               </a>
-              <a href="#about" className="text-foreground hover:text-accent transition-colors font-medium">
-                About
+              <a href="/gallery" className="text-foreground hover:text-accent transition-colors font-medium">
+                Տեսադարան
               </a>
               <a href="/#services" className="text-foreground hover:text-accent transition-colors font-medium">
-                Services
-              </a>
-              <a href="/#contact" className="text-foreground hover:text-accent transition-colors font-medium">
-                Contact
+                Ծառայություններ
               </a>
               <Button onClick={scrollToContact} className="bg-accent hover:bg-accent/90 text-accent-foreground w-fit">
                 Կապ

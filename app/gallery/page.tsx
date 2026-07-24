@@ -121,10 +121,10 @@ export default function GalleryPage() {
                         <div className="relative flex max-h-full w-full max-w-5xl flex-col gap-4 rounded-2xl bg-background p-4 shadow-2xl ring-1 ring-border md:p-6">
                             {/* Close */}
                             <Dialog.Close
-                                className="absolute right-3 top-3 rounded-full bg-black/60 px-3 py-1 text-xs font-medium text-white outline-none ring-0 transition hover:bg-black focus-visible:ring-2 focus-visible:ring-primary"
+                                className="absolute right-3 top-3 z-10 rounded-full bg-black/60 px-3 py-1 text-xs font-medium text-white outline-none ring-0 transition hover:bg-black focus-visible:ring-2 focus-visible:ring-primary"
                                 aria-label="Close"
                             >
-                                ✕ Close
+                                ✕ Փակել
                             </Dialog.Close>
 
                             {/* Main content */}
@@ -178,14 +178,14 @@ export default function GalleryPage() {
                                             onClick={showPrev}
                                             className="rounded-full bg-black/60 px-3 py-1 text-xs text-white outline-none ring-0 transition hover:bg-black focus-visible:ring-2 focus-visible:ring-primary"
                                         >
-                                            Prev
+                                            Նախորդ
                                         </button>
                                         <button
                                             type="button"
                                             onClick={showNext}
                                             className="rounded-full bg-black/60 px-3 py-1 text-xs text-white outline-none ring-0 transition hover:bg-black focus-visible:ring-2 focus-visible:ring-primary"
                                         >
-                                            Next
+                                            Հաջորդ
                                         </button>
                                     </div>
 
